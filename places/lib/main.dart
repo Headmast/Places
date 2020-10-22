@@ -128,7 +128,6 @@ class MyFirstWidget extends StatelessWidget {
      child: Center(
        child: Text('Hello world!')
      )
-      
     );
   }
 }
@@ -144,12 +143,11 @@ class _MyFirsStatefultWidgetState extends State<MyFirsStatefultWidget> {
   @override
   Widget build(BuildContext context) {
     counter += 1;
-    print("StatelessWidget count $counter");
+    print("StatefultWidget count $counter");
     return Container(
      child: Center(
        child: Text('Hello world!')
      )
-      
     );
   }
 }
