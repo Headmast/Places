@@ -123,6 +123,10 @@ class MyFirstWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     counter += 1;
+    /*
+      After each hot reload, the counter will be erased. 
+      Alwayes: StatelessWidget count 1
+    */
     print("StatelessWidget count $counter");
     return Container(
      child: Center(
@@ -143,6 +147,11 @@ class _MyFirsStatefultWidgetState extends State<MyFirsStatefultWidget> {
   @override
   Widget build(BuildContext context) {
     counter += 1;
+    /*
+      After each hot reload, the counter will be incremented.
+      StatefultWidget count 1
+      StatefultWidget count 2
+    */
     print("StatefultWidget count $counter");
     return Container(
      child: Center(
