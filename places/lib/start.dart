@@ -118,8 +118,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
+// ignore: must_be_immutable
 class MyFirstWidget extends StatelessWidget {
-  var counter = 0;
+  int counter = 0;
   @override
   Widget build(BuildContext context) {
     counter += 1;
