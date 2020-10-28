@@ -27,7 +27,8 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyFirsStatefultWidget(
+      ),
     );
   }
 }
@@ -113,6 +114,49 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class MyFirstWidget extends StatelessWidget {
+  var counter = 0;
+  @override
+  Widget build(BuildContext context) {
+    counter += 1;
+    /*
+      After each hot reload, the counter will be erased. 
+      Alwayes: StatelessWidget count 1
+    */
+    print("StatelessWidget count $counter");
+    return Container(
+     child: Center(
+       child: Text('Hello world!')
+     )
+    );
+  }
+}
+
+class MyFirsStatefultWidget extends StatefulWidget {
+  
+  @override
+  _MyFirsStatefultWidgetState createState() => _MyFirsStatefultWidgetState();
+}
+
+class _MyFirsStatefultWidgetState extends State<MyFirsStatefultWidget> {
+  var counter = 0;
+  @override
+  Widget build(BuildContext context) {
+    counter += 1;
+    /*
+      After each hot reload, the counter will be incremented.
+      StatefultWidget count 1
+      StatefultWidget count 2
+    */
+    print("StatefultWidget count $counter");
+    return Container(
+     child: Center(
+       child: Text('Hello world!')
+     )
     );
   }
 }
